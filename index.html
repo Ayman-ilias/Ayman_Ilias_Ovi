@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayman Ilias Ovi — ML Researcher & CS/AI Research Assistant</title>
+    <meta name="description"
+        content="Portfolio of Ayman Ilias Ovi — ML Researcher, Computer Vision Engineer, and aspiring CS/AI Research Assistant. Showcasing research experience, ML projects, and technical expertise.">
+    <meta name="keywords"
+        content="Machine Learning, Computer Vision, Research Assistant, AI, Python, Deep Learning, Ayman Ilias Ovi">
+    <meta name="author" content="Ayman Ilias Ovi">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:wght@700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ═══════════════ PARTICLE CANVAS ═══════════════ -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- ═══════════════ CURSOR GLOW ═══════════════ -->
+    <div id="cursor-glow"></div>
+
+    <!-- ═══════════════ NAVIGATION ═══════════════ -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>AIO<span class="logo-bracket">/&gt;</span>
+            </a>
+            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" data-section="about">About</a></li>
+                <li><a href="#experience" data-section="experience">Experience</a></li>
+                <li><a href="#research" data-section="research">Research</a></li>
+                <li><a href="#projects" data-section="projects">Projects</a></li>
+                <li><a href="#skills" data-section="skills">Skills</a></li>
+                <li><a href="#achievements" data-section="achievements">Achievements</a></li>
+                <li><a href="#contact" data-section="contact" class="nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ═══════════════ HERO SECTION ═══════════════ -->
+    <section id="hero">
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Open to Research Opportunities
+                </div>
+                <h1 class="hero-title">
+                    <span class="hero-greeting">Hello, I'm</span>
+                    <span class="hero-name">Ayman Ilias Ovi</span>
+                    <span class="hero-role" id="typed-role"></span>
+                </h1>
+                <p class="hero-description">
+                    ML Researcher & Computer Vision Engineer with hands-on experience in
+                    <span class="highlight">end-to-end experiment design</span>,
+                    <span class="highlight">reproducible research pipelines</span>, and
+                    <span class="highlight">data-driven solutions</span>. Passionate about pushing
+                    the boundaries of AI through rigorous, publication-quality research.
+                </p>
+                <div class="hero-actions">
+                    <a href="#research" class="btn btn-primary">
+                        <i class="fas fa-flask"></i> View Research
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-paper-plane"></i> Get in Touch
+                    </a>
+                    <a href="Ayman_Ilias_RA.pdf" class="btn btn-ghost" download>
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="4">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Research Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="30">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">GitHub Repos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="25">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Kaggle Notebooks</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="250">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Problems Solved</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="profile-card">
+                    <div class="profile-ring"></div>
+                    <img src="assets/profile.png" alt="Ayman Ilias Ovi" class="profile-img" id="profile-img">
+                    <div class="profile-decoration">
+                        <div class="orbit orbit-1"><span class="orbit-dot"></span></div>
+                        <div class="orbit orbit-2"><span class="orbit-dot"></span></div>
+                        <div class="orbit orbit-3"><span class="orbit-dot"></span></div>
+                    </div>
+                </div>
+                <div class="floating-tags">
+                    <span class="float-tag tag-1" data-aos="zoom-in" data-aos-delay="800"><i class="fas fa-brain"></i>
+                        ML/AI</span>
+                    <span class="float-tag tag-2" data-aos="zoom-in" data-aos-delay="1000"><i class="fas fa-eye"></i>
+                        Computer Vision</span>
+                    <span class="float-tag tag-3" data-aos="zoom-in" data-aos-delay="1200"><i class="fab fa-python"></i>
+                        Python</span>
+                    <span class="float-tag tag-4" data-aos="zoom-in" data-aos-delay="1400"><i
+                            class="fas fa-microscope"></i> Research</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- ═══════════════ ABOUT SECTION ═══════════════ -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-user"></i> About Me</span>
+                <h2 class="section-title">Research-Driven Engineer</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text" data-aos="fade-right">
+                    <p>
+                        I am an ML Researcher and Computer Vision Engineer with a B.Sc. in Mechatronics & Industrial
+                        Engineering from <strong>CUET</strong> (CGPA: 3.43/4.00, Final Year: 3.78/4.00). My research
+                        focuses on designing reproducible, end-to-end ML experiments with a commitment to scientific
+                        rigor.
+                    </p>
+                    <p>
+                        With experience across <strong>4 research projects</strong> spanning computer vision, traffic
+                        intelligence, time-series prediction, and environmental risk assessment, I bring a diverse
+                        research portfolio suited for interdisciplinary lab work. I am proficient in Python, TensorFlow,
+                        OpenCV, and YOLO, with strong foundations in ML fundamentals — model architectures, training
+                        dynamics, and evaluation methodology.
+                    </p>
+                    <p>
+                        I am passionate about contributing to <strong>publication-quality research</strong> in top-tier
+                        AI venues, and I am eager to collaborate in a research lab environment where rigorous
+                        experimentation
+                        and impactful science drive the work.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="about-highlight-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <strong>B.Sc. MIE, CUET</strong>
+                                <span>CGPA 3.43 · Final Year 3.78</span>
+                            </div>
+                        </div>
+                        <div class="about-highlight-item">
+                            <i class="fas fa-flask"></i>
+                            <div>
+                                <strong>4+ Research Projects</strong>
+                                <span>CV, ML, Time-Series, GIS</span>
+                            </div>
+                        </div>
+                        <div class="about-highlight-item">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <strong>30+ GitHub Repos</strong>
+                                <span>Reproducible Codebases</span>
+                            </div>
+                        </div>
+                        <div class="about-highlight-item">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <strong>Merit Scholarship</strong>
+                                <span>3 Consecutive Semesters</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="research-interests-card">
+                        <h3><i class="fas fa-lightbulb"></i> Research Interests</h3>
+                        <div class="interest-tags">
+                            <span class="interest-tag">Computer Vision</span>
+                            <span class="interest-tag">AI-Driven Intelligent Control</span>
+                            <span class="interest-tag">ML Evaluation & Benchmarking</span>
+                            <span class="interest-tag">Time-Series Prediction</span>
+                            <span class="interest-tag">Environmental AI</span>
+                            <span class="interest-tag">Reproducible Pipelines</span>
+                            <span class="interest-tag">Human-Machine Interaction</span>
+                            <span class="interest-tag">Edge AI & Embedded ML</span>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <h3><i class="fas fa-university"></i> Education</h3>
+                        <div class="edu-item">
+                            <div class="edu-year">2020 — 2025</div>
+                            <div class="edu-details">
+                                <strong>B.Sc. in Mechatronics & Industrial Engineering</strong>
+                                <span>Chittagong University of Engineering & Technology</span>
+                                <span class="edu-score">CGPA: 3.43/4.00 · Final Year: 3.78/4.00</span>
+                            </div>
+                        </div>
+                        <div class="edu-item">
+                            <div class="edu-year">2017 — 2019</div>
+                            <div class="edu-details">
+                                <strong>Higher Secondary Certificate (HSC)</strong>
+                                <span>Chittagong College — Science Group</span>
+                                <span class="edu-score">GPA: 5.00/5.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ EXPERIENCE SECTION ═══════════════ -->
+    <section id="experience" class="section section-alt">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-briefcase"></i> Experience</span>
+                <h2 class="section-title">Professional Journey</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-marker">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>R&D Engineer</h3>
+                            <span class="timeline-company">Southern IoT, Dhaka, Bangladesh</span>
+                            <span class="timeline-date"><i class="far fa-calendar"></i> Aug 2025 — Present</span>
+                        </div>
+                        <ul class="timeline-highlights">
+                            <li>
+                                <span class="highlight-label">AI-Driven Research:</span>
+                                Conducting applied AI research including intelligent automation systems, sensor fusion,
+                                and data-driven decision making for industrial IoT deployments
+                            </li>
+                            <li>
+                                <span class="highlight-label">Data Pipeline Development:</span>
+                                Built end-to-end industrial data pipeline (ESP32 → MQTT → InfluxDB → Grafana) for
+                                real-time energy monitoring across industrial facilities
+                            </li>
+                            <li>
+                                <span class="highlight-label">Software Development:</span>
+                                Developed 3 enterprise software solutions (POS, file-sharing, inventory management);
+                                currently building ERP system
+                            </li>
+                            <li>
+                                <span class="highlight-label">Embedded ML:</span>
+                                Programmed ESP32, STM32, and RAK microcontrollers for sensor data acquisition
+                            </li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Python</span><span>Django</span><span>InfluxDB</span><span>MQTT</span><span>IoT</span><span>Grafana</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-marker">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Coding Instructor</h3>
+                            <span class="timeline-company">Dreamers Academy, Dhaka</span>
+                            <span class="timeline-date"><i class="far fa-calendar"></i> Jun 2024 — Oct 2024</span>
+                        </div>
+                        <ul class="timeline-highlights">
+                            <li>Delivered <strong>180+ Python sessions</strong> covering data structures, OOP,
+                                algorithms, and computational thinking</li>
+                            <li>Designed structured assessment frameworks and iterative curriculum — relevant to
+                                mentoring junior research interns</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Python</span><span>DSA</span><span>OOP</span><span>Teaching</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ RESEARCH SECTION ═══════════════ -->
+    <section id="research" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-microscope"></i> Research</span>
+                <h2 class="section-title">Research Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="research-grid">
+
+                <!-- Research 1: Thesis -->
+                <div class="research-card research-card-featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="research-card-badge">Undergraduate Thesis</div>
+                    <div class="research-card-header">
+                        <div class="research-icon"><i class="fas fa-traffic-light"></i></div>
+                        <h3>Density-Based AI-Driven Traffic Control System</h3>
+                    </div>
+                    <p class="research-desc">
+                        Designed and implemented a YOLOv8-based vehicle density detection pipeline for real-time
+                        adaptive traffic
+                        signal control, following a reproducible end-to-end experimental workflow.
+                    </p>
+                    <ul class="research-details">
+                        <li>Conducted controlled ablation studies comparing detection thresholds and signal timing
+                            strategies</li>
+                        <li>Adaptive control reduced simulated intersection wait times by <strong>35%</strong> over
+                            fixed-timing baseline</li>
+                        <li>Built web-based simulation platform for four-way intersection benchmarking</li>
+                    </ul>
+                    <div class="research-supervisor">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Supervised by: S. M. Fahim Faisal, Asst. Professor, Dept. of MIE, CUET</span>
+                    </div>
+                    <div class="research-tools">
+                        <span>Python</span><span>YOLOv8</span><span>OpenCV</span><span>TensorFlow</span><span>Django</span>
+                    </div>
+                    <a href="https://github.com/Ayman-ilias/Density_Based_AI_Driven_Traffic_Control_System"
+                        class="research-link" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+
+                <!-- Research 2 -->
+                <div class="research-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="research-card-badge">Interactive Researcher</div>
+                    <div class="research-card-header">
+                        <div class="research-icon"><i class="fas fa-car"></i></div>
+                        <h3>Vehicle Classification & Traffic Analysis</h3>
+                    </div>
+                    <p class="research-desc">
+                        Collaborated on faculty-led computer vision research; processed multi-location surveillance
+                        footage
+                        and built automated vehicle counting pipeline with class-wise categorization.
+                    </p>
+                    <ul class="research-details">
+                        <li>Designed evaluation methodology for counting accuracy</li>
+                        <li>Statistical analysis across 3–4 locations over a 1-month period</li>
+                    </ul>
+                    <div class="research-supervisor">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Supervised by: Sumaya Sadia Toha, Lecturer, Civil Eng., CUET</span>
+                    </div>
+                    <div class="research-tools">
+                        <span>Python</span><span>OpenCV</span><span>ML</span><span>Data Viz</span>
+                    </div>
+                </div>
+
+                <!-- Research 3 -->
+                <div class="research-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="research-card-badge">Research Collaborator</div>
+                    <div class="research-card-header">
+                        <div class="research-icon"><i class="fas fa-ambulance"></i></div>
+                        <h3>Traffic Prediction & Emergency Route Optimization</h3>
+                    </div>
+                    <p class="research-desc">
+                        Engineered a Python-based data collection pipeline integrating TomTom and OpenWeatherMap APIs
+                        for real-time traffic and weather ingestion for ambulance routing.
+                    </p>
+                    <ul class="research-details">
+                        <li>Curated 34-feature time-series dataset for LSTM model training</li>
+                        <li>Feature selection and temporal analysis to optimize emergency vehicle routing</li>
+                    </ul>
+                    <div class="research-tools">
+                        <span>Python</span><span>LSTM</span><span>REST APIs</span><span>Pandas</span><span>NumPy</span>
+                    </div>
+                </div>
+
+                <!-- Research 4 -->
+                <div class="research-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="research-card-badge">Research Collaborator</div>
+                    <div class="research-card-header">
+                        <div class="research-icon"><i class="fas fa-cloud-rain"></i></div>
+                        <h3>Flash Flood Risk Assessment — Chattogram City</h3>
+                    </div>
+                    <p class="research-desc">
+                        Compiled and validated 50-year rainfall datasets (1975–2024) from BMD, BWDB, World Bank Climate
+                        Portal
+                        for data-driven environmental risk modelling.
+                    </p>
+                    <ul class="research-details">
+                        <li>Applied GIS and statistical aggregation across 41 city wards (2015–2024)</li>
+                        <li>Contributed to reproducible data validation workflows</li>
+                    </ul>
+                    <div class="research-domain">
+                        <i class="fas fa-globe-americas"></i> AI for Social Science / Environmental Policy
+                    </div>
+                    <div class="research-tools">
+                        <span>GIS</span><span>Statistics</span><span>Python</span><span>Data Analysis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ PROJECTS SECTION ═══════════════ -->
+    <section id="projects" class="section section-alt">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-code-branch"></i> Projects</span>
+                <h2 class="section-title">ML & AI Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-robot"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/Ayman-ilias/Ai_TEXT_DETECTOR" target="_blank" rel="noopener"
+                                aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3>AI-Generated Text Detection</h3>
+                    <p>Designed and benchmarked an SVM classifier to distinguish AI-generated from human text, achieving
+                        <strong>85% accuracy</strong>. Implemented TF-IDF vectorization and n-gram analysis.
+                    </p>
+                    <ul class="project-details">
+                        <li>Systematic comparison with documented evaluation metrics (precision, recall, F1)</li>
+                        <li>Demonstrates reproducible experimentation practices</li>
+                    </ul>
+                    <div class="project-tools">
+                        <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-road"></i></div>
+                        <div class="project-links">
+                            <a href="https://drive.google.com/drive/folders/1CI6-3oD0T2Kwoakp3QqB_dzH7mB133t-?usp=sharing"
+                                target="_blank" rel="noopener" aria-label="Drive Link"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3>Advanced Lane Detection & Vehicle Tracking</h3>
+                    <p>Real-time collision warning system with distance estimation using OpenCV. Evaluated across
+                        multiple road condition scenarios.</p>
+                    <div class="project-tools">
+                        <span>Python</span><span>OpenCV</span><span>YOLO</span><span>TensorFlow</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-hand-paper"></i></div>
+                        <div class="project-links">
+                            <a href="https://drive.google.com/drive/folders/1CI6-3oD0T2Kwoakp3QqB_dzH7mB133t-?usp=sharing"
+                                target="_blank" rel="noopener" aria-label="Drive Link"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3>Hand-Raised Detection System</h3>
+                    <p>Automated classroom participation tracking using pose estimation. Benchmarked detection accuracy
+                        against manual labeling ground truth.</p>
+                    <div class="project-tools">
+                        <span>Python</span><span>OpenCV</span><span>Pose Estimation</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-images"></i></div>
+                        <div class="project-links">
+                            <a href="https://drive.google.com/drive/folders/1CI6-3oD0T2Kwoakp3QqB_dzH7mB133t-?usp=sharing"
+                                target="_blank" rel="noopener" aria-label="Drive Link"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3>Panoramic Image Generation</h3>
+                    <p>Feature-matching pipeline for stitching video frames into panoramas. Implemented SIFT/SURF
+                        feature extraction and homography estimation.</p>
+                    <div class="project-tools">
+                        <span>Python</span><span>OpenCV</span><span>Feature Matching</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ SKILLS SECTION ═══════════════ -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-cogs"></i> Skills</span>
+                <h2 class="section-title">Technical Arsenal</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-category-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>ML & Deep Learning</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span class="skill-name">TensorFlow</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"><span class="skill-name">Scikit-learn</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"><span class="skill-name">YOLO (v5/v8)</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"><span class="skill-name">LSTM / RNN</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"><span class="skill-name">SVM / TF-IDF</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="82"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-category-header">
+                        <i class="fas fa-eye"></i>
+                        <h3>Computer Vision</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span class="skill-name">OpenCV</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"><span class="skill-name">Object Detection</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"><span class="skill-name">Vehicle Tracking</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"><span class="skill-name">Lane Detection</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"><span class="skill-name">Feature Matching</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-category-header">
+                        <i class="fas fa-terminal"></i>
+                        <h3>Programming</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"><span class="skill-name">C / C++</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"><span class="skill-name">SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="78"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"><span class="skill-name">Django</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"><span class="skill-name">Git / GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="88"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-category-header">
+                        <i class="fas fa-flask"></i>
+                        <h3>Research & Data</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span class="skill-name">Pandas / NumPy</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"><span class="skill-name">Matplotlib / Seaborn</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"><span class="skill-name">LaTeX</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="78"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"><span class="skill-name">Statistical Analysis</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"><span class="skill-name">Kaggle / Colab</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="88"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ ACHIEVEMENTS SECTION ═══════════════ -->
+    <section id="achievements" class="section section-alt">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-award"></i> Achievements</span>
+                <h2 class="section-title">Milestones & Recognition</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="achievement-icon"><i class="fas fa-medal"></i></div>
+                    <h3>Academic Excellence</h3>
+                    <p>Final Year CGPA: <strong>3.78/4.00</strong> with consistent academic improvement throughout the
+                        degree</p>
+                </div>
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="achievement-icon"><i class="fas fa-award"></i></div>
+                    <h3>Merit Scholarship</h3>
+                    <p>University merit-based scholarship for <strong>3 consecutive semesters</strong> for outstanding
+                        performance</p>
+                </div>
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="achievement-icon"><i class="fab fa-kaggle"></i></div>
+                    <h3>Kaggle Contributor</h3>
+                    <p>Active contributor with <strong>25+ notebooks</strong> on computer vision and ML applications</p>
+                </div>
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="achievement-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>250+ Problems Solved</h3>
+                    <p>Algorithmic challenges solved on <strong>LeetCode</strong>, <strong>HackerRank</strong>, and
+                        <strong>Codeforces</strong>
+                    </p>
+                </div>
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                    <h3>Competition Champion</h3>
+                    <p><strong>Champion</strong> — Tech Day Competition, Robo Mechatronics Association (RMA), as Team
+                        Captain</p>
+                </div>
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="achievement-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>Certifications</h3>
+                    <p>Data Science & ML (Ostad), CS Fundamentals (Phitron), Python & SQL (HackerRank), Industrial
+                        Automation (CUET)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ CONTACT SECTION ═══════════════ -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-envelope"></i> Contact</span>
+                <!-- <h2 class="section-title">Let's Collaborate</h2> -->
+                <!-- <div class="section-line"></div> -->
+                <!-- <p class="section-subtitle">I'm actively seeking Research Assistant positions in CS/AI labs. Let's discuss how I can contribute to your research.</p> -->
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:aymanilias00@gmail.com">aymanilias00@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+8801703645713">+880 170 364 5713</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Location</h4>
+                            <span>Chattogram, Bangladesh</span>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/in/aymanilias" target="_blank" rel="noopener"
+                            aria-label="LinkedIn" class="social-btn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Ayman-ilias" target="_blank" rel="noopener" aria-label="GitHub"
+                            class="social-btn">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://kaggle.com/aymanilias999" target="_blank" rel="noopener" aria-label="Kaggle"
+                            class="social-btn">
+                            <i class="fab fa-kaggle"></i>
+                        </a>
+                    </div>
+                    <div class="references-card">
+                        <h4><i class="fas fa-user-check"></i> References</h4>
+                        <div class="reference-item">
+                            <strong>S.M Fahim Faisal</strong>
+                            <span>PhD Researcher (Thesis Supervisor)</span>
+                            <span>Virginia Tech, USA</span>
+                            <a href="mailto:fahimfaisal@cuet.ac.bd"><i class="fas fa-envelope"></i>
+                                fahimfaisal@cuet.ac.bd</a>
+                        </div>
+                        <div class="reference-item">
+                            <strong>Sanjeeb Roy</strong>
+                            <span>Graduate Assistant</span>
+                            <span>University of Arizona, USA</span>
+                            <a href="mailto:sanjeeb@cuet.ac.bd"><i class="fas fa-envelope"></i> sanjeeb@cuet.ac.bd</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrap" data-aos="fade-left">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject"
+                                placeholder="Research Collaboration / Position">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5"
+                                placeholder="Tell me about the research opportunity..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>Ayman Ilias Ovi<span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-text">ML Researcher · Computer Vision Engineer · Aspiring Research Assistant</p>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/aymanilias" target="_blank" rel="noopener"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Ayman-ilias" target="_blank" rel="noopener"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://kaggle.com/aymanilias999" target="_blank" rel="noopener"><i
+                            class="fab fa-kaggle"></i></a>
+                    <a href="mailto:aymanilias00@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p class="footer-copy">&copy; 2025 Ayman Ilias Ovi. Crafted with passion for research.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════════════ BACK TO TOP ═══════════════ -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- AOS Init -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
